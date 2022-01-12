@@ -1,116 +1,154 @@
-.container {
-  padding: 0 2rem;
+/* 
+color:hsl(0, 0%, 17%);
+color: hsl(0, 0%, 59%);
+*/
+
+/*==========  ID Rules  ==========*/
+#absolute {
+  z-index: 2;
+  margin-top: 70px;
+  position: absolute;
 }
 
-.main {
-  min-height: 100vh;
-  padding: 4rem 0;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+#map {
+  width: 100%;
+  height: 70vh;
+  z-index: 1;
 }
 
-.footer {
-  display: flex;
-  flex: 1;
-  padding: 2rem 0;
-  border-top: 1px solid #eaeaea;
-  justify-content: center;
-  align-items: center;
+#inputter {
+  width: 90%;
+  height: 100%;
+  padding: 0% 5%
 }
 
-.footer a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-grow: 1;
-}
-
-.title a {
-  color: #0070f3;
-  text-decoration: none;
-}
-
-.title a:hover,
-.title a:focus,
-.title a:active {
-  text-decoration: underline;
-}
-
-.title {
-  margin: 0;
-  line-height: 1.15;
-  font-size: 4rem;
-}
-
-.title,
-.description {
-  text-align: center;
-}
-
-.description {
-  margin: 4rem 0;
-  line-height: 1.5;
-  font-size: 1.5rem;
-}
-
-.code {
-  background: #fafafa;
-  border-radius: 5px;
-  padding: 0.75rem;
-  font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
-}
-
-.grid {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  max-width: 800px;
-}
-
-.card {
-  margin: 1rem;
-  padding: 1.5rem;
-  text-align: left;
-  color: inherit;
-  text-decoration: none;
-  border: 1px solid #eaeaea;
+#data {
+  width: 80%;
+  height: fit-content;
+  margin: 20px auto;
+  padding: 10px 0px;
   border-radius: 10px;
-  transition: color 0.15s ease, border-color 0.15s ease;
-  max-width: 300px;
+  background-color:hsl(0, 0%, 100%);
+  box-shadow: 1px 9px 15px 5px rgba(0, 0, 0, 0.3);
 }
 
-.card:hover,
-.card:focus,
-.card:active {
-  color: #0070f3;
-  border-color: #0070f3;
+#flexbox {
+  width: 90%;
+  height: 100%;
+  display: flex;
+  margin: 0px auto;
+  flex-wrap: nowrap;
+  flex-direction: column;
 }
 
-.card h2 {
-  margin: 0 0 1rem 0;
-  font-size: 1.5rem;
+
+/*==========  Class Rules  ==========*/
+.item {
+  width: 80%;
+  padding: 0px 10px;
+  margin: 15px auto;
+  margin-bottom: 0px;
 }
 
-.card p {
-  margin: 0;
-  font-size: 1.25rem;
-  line-height: 1.5;
+.cont {
+  margin: 18px auto;
+  width: fit-content;
+  height: fit-content;
 }
 
-.logo {
-  height: 1em;
-  margin-left: 0.5rem;
+.body {
+  width: 100%;
+  height: fit-content; 
+  position: relative;
 }
 
-@media (max-width: 600px) {
-  .grid {
-    width: 100%;
-    flex-direction: column;
+.header {
+  width: 100%;
+  height: 30vh;
+  position: relative;
+  background: url(/pattern-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.form {
+  width: 80%;
+  height: 50px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.button {
+  top: 0;
+  right: 0;
+  z-index: 2;
+  width: 50px;
+  height: 52px;
+  position: absolute;
+  transform: translateX(2px);
+  border-top-right-radius:15px;
+  border-bottom-right-radius: 15px;
+  background-color:hsl(0, 0%, 0%);
+}
+
+
+
+/*==========  Animation Rules  ==========*/
+
+
+
+/*==========  Media Queries Rules  ==========*/
+@media only screen and (orientation: landscape) {
+  #border {
+    border-right: none;
+  }
+
+  #map {
+    height: 60vh;
+  }
+
+  .header {
+    height: 40vh;
+  }
+  
+  .form {
+    width: 50%;
+  }
+
+  #flexbox {
+    flex-direction: row;
+  }
+
+  .item {
+    width: 21%;
+    border-right: 1px solid hsl(0, 0%, 59%);;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .header {
+    height:23vh;
+  }
+
+  #map {
+    height: 77vh;
+  }
+
+  .form {
+    width: 40%;
+  }
+
+  #data {
+    width: 60%;
+  }
+}
+
+@media only screen and (min-width: 1370px) {
+  .header {
+    height:27vh;
+  }
+
+  #map {
+    height: 73vh;
   }
 }
